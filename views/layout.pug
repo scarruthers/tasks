@@ -1,0 +1,75 @@
+html
+  head
+    title TODO - #{title}
+    block css
+      link(rel='stylesheet', type='text/css', href='/css/bootstrap.min.css')
+      link(rel='stylesheet', type='text/css', href='/css/index.css')
+    block scripts
+      script(type='text/javascript', src='/js/jquery.min.js')
+      script(type='text/javascript', src='/js/bootstrap.min.js')
+  body
+    nav.navbar.navbar-dark.sticky-top.bg-dark.flex-md-nowrap.p-0
+      a.navbar-brand.col-sm-3.col-md-2.mr-0(href='/') TODO
+      input.form-control.form-control-dark.w-100(type='text' placeholder='Search' aria-label='Search')
+      ul.navbar-nav.px-3
+        li.nav-item.text-nowrap
+          a.nav-link(href='#') Sign out
+          
+    .container-fluid
+      .row
+        nav.col-md-2.d-none.d-md-block.bg-light.sidebar
+          .sidebar-sticky
+            ul.nav.flex-column
+              li.nav-item
+                a.nav-link.active(href='#')
+                  span(data-feather='home')
+                  | Dashboard 
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='file')
+                  | Orders
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='shopping-cart')
+                  | Products
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='users')
+                  | Customers
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='bar-chart-2')
+                  | Reports
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='layers')
+                  | Integrations
+            h6.sidebar-heading.d-flex.justify-content-between.align-items-center.px-3.mt-4.mb-1.text-muted
+              span Saved reports
+              a.d-flex.align-items-center.text-muted(href='#')
+                span(data-feather='plus-circle')
+            ul.nav.flex-column.mb-2
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='file-text')
+                  | Current month
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='file-text')
+                  | Last quarter
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='file-text')
+                  | Social engagement
+              li.nav-item
+                a.nav-link(href='#')
+                  span(data-feather='file-text')
+                  |                Year-end sale
+        main.col-md-9.ml-sm-auto.col-lg-10.pt-3.px-4(role='main')
+          .d-flex.justify-content-between.flex-wrap.flex-md-nowrap.align-items-center.pb-2.mb-3.border-bottom
+            h1.h2 Dashboard
+          block messages
+            != messages('message', local)
+          block content
+            h1 This shouldn't show up if overriden
+          block footer

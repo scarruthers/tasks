@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+  h3 Add a task
+  form(action='/tasks/add', method='POST')
+    .form-group
+      label Task Name
+      input(type='text', name='task')
+    .form-group
+      label Notes
+      textarea(name='notes')
+        
+    button(type='submit') Add Task to TODO
+    

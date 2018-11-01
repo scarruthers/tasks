@@ -1,0 +1,7 @@
+extends layout.pug
+
+block content
+  h1 Main page
+  ul
+    each task in tasks
+      li= task.task + ': ' + task.notes
