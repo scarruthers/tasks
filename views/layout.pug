@@ -7,6 +7,7 @@ html
     block scripts
       script(type='text/javascript', src='/js/jquery.min.js')
       script(type='text/javascript', src='/js/bootstrap.min.js')
+      script(type='text/javascript', src='/js/feather.min.js')
   body
     nav.navbar.navbar-dark.sticky-top.bg-dark.flex-md-nowrap.p-0
       a.navbar-brand.col-sm-3.col-md-2.mr-0(href='/') TODO
@@ -23,11 +24,11 @@ html
               li.nav-item
                 a.nav-link.active(href='#')
                   span(data-feather='home')
-                  | Dashboard 
+                  | TODO Home 
               li.nav-item
-                a.nav-link(href='#')
+                a.nav-link(href='/tasks/add')
                   span(data-feather='file')
-                  | Orders
+                  | Add Task
               li.nav-item
                 a.nav-link(href='#')
                   span(data-feather='shopping-cart')
@@ -73,3 +74,5 @@ html
           block content
             h1 This shouldn't show up if overriden
           block footer
+  script.
+    feather.replace()

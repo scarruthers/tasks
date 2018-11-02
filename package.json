@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "eslint": "^5.8.0"
+  },
+  "nodemonConfig": {
+    "ext": "js,json,css,pug"
   }
 }

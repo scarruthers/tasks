@@ -1,5 +1,7 @@
 .messages
   each type in Object.keys(messages)
-    ul(class="#{type}")
-      each message in messages[type]
-        li= message
+    each message in messages[type]
+      div(class='alert alert-' + type + ' alert-dismissable')
+        strong= message
+        button.close(type='button' data-dismiss='alert' aria-label='Close')
+          span(aria-hidden='true') &times;
